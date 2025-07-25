@@ -103,3 +103,34 @@ If you make use of our work, please cite our paper:
     year      = "2024"
 }
 ```
+
+
+---
+
+## 🔬 PromptKD-SKL (New)
+
+PromptKD-SKL improves prompt-based distillation via:
+
+- Skewed KL divergences (`alpha`-SKL, `alpha`-SRKL)
+- Hybrid prompting (soft + hard)
+- Exposure-bias mitigation with student-generated outputs
+
+### 🔧 Training
+
+```bash
+python train_promptkd_skl.py \
+  --model_name gpt2 \
+  --teacher_name gpt2-xl \
+  --output_dir ./promptkd_skl_out \
+  --alpha 0.1 \
+  --lambda_reg 1.0 \
+  --epochs 3
+```
+
+### 📈 Evaluation
+
+```bash
+python evaluate_skl.py --model_path ./promptkd_skl_out
+```
+
+---
