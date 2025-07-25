@@ -132,5 +132,5 @@ python evaluate_skl.py --model_path ./promptkd_skl_out
 ---
 ## Credits
 PromptKD implementation:  
-[https://github.com/microsoft/LMOps/tree/main/minillm](https://promptkd.github.io/)  
+[[https://github.com/microsoft/LMOps/tree/main/minillm](https://promptkd.github.io/)](https://github.com/gmkim-ai/PromptKD)  
 License (MIT) https://github.com/microsoft/LMOps/blob/main/LICENSE  
