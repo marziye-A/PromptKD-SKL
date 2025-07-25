@@ -100,32 +100,6 @@ python3 tools/convert_mp.py \
 
 
 
-## Credits
-MiniLLM implementation:  
-https://github.com/microsoft/LMOps/tree/main/minillm  
-License (MIT) https://github.com/microsoft/LMOps/blob/main/LICENSE  
-
-
-## Acknowledgement
-```
-This work was supported by Institute for Information & communications Technology Promotion (IITP) grant funded by the Korea government (MSIT)
-(No.RS-2019-II190075, Artificial Intelligence Graduate School Program(KAIST))
-```
-
-
-## Citation
-
-If you make use of our work, please cite our paper:
-
-```
-@inproceedings{kim-etal-2024-promptkd,
-    title     = "PromptKD: Distilling Student-Friendly Knowledge for Generative Language Models via Prompt Tuning",
-    author    = "Kim, Gyeongman and Jang, Doohyuk and Yang, Eunho",
-    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
-    year      = "2024"
-}
-```
-
 
 ---
 
@@ -156,3 +130,7 @@ python evaluate_skl.py --model_path ./promptkd_skl_out
 ```
 
 ---
+## Credits
+PromptKD implementation:  
+[https://github.com/microsoft/LMOps/tree/main/minillm](https://promptkd.github.io/)  
+License (MIT) https://github.com/microsoft/LMOps/blob/main/LICENSE  
