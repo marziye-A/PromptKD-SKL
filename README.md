@@ -6,11 +6,35 @@ Skew Divergence
 
 
 > **PromptKD: Distilling Student-Friendly Knowledge for Generative Language Models via Prompt Tuning**<br>
-> Gyeongman Kim, Doohyuk Jang, Eunho Yang <br>
+> Marzieh Azad <br>
 
 >**Abstract**: <br>
-> Recent advancements in large language models (LLMs) have raised concerns about inference costs, increasing the need for research into model compression. While knowledge distillation (KD) is a prominent method for this, research on KD for generative language models like LLMs is relatively sparse, and the approach of distilling student-friendly knowledge, which has shown promising performance in KD for classification models, remains unexplored in generative language models. To explore this approach, we propose PromptKD, a simple yet effective method that utilizes prompt tuning - for the first time in KD - to enable generative language models to transfer student-friendly knowledge. Unlike previous works in classification that require fine-tuning the entire teacher model for extracting student-friendly knowledge, PromptKD achieves similar effects by adding a small number of prompt tokens and tuning only the prompt with student guidance. Extensive experiments on instruction-following datasets using the GPT-2 model family show that PromptKD achieves state-of-the-art performance while adding only 0.0007% of the teacher's parameters as prompts. Further analysis suggests that distilling student-friendly knowledge alleviates exposure bias effectively throughout the entire training process, leading to performance enhancements.
-
+> Abstract—Prompt-based knowledge distillation (KD) has re-
+cently emerged as a lightweight and effective method for com-
+pressing large generative language models (LLMs). However,
+existing methods such as PROMPTKD rely on reverse KL
+divergence, which often suffers from gradient instability and
+poor convergence, especially in the early stages of training. In
+this work, we propose PROMPTKD-SKL, a novel distillation
+framework that incorporates skew Kullback-Leibler divergence
+(SKL) to improve the stability, efficiency, and performance of
+prompt-based KD.
+PROMPTKD-SKL preserves the parameter efficiency of soft
+prompt tuning while replacing standard divergence objectives
+with α-SKL and α-SRKL, which interpolate between teacher and
+student distributions to yield smoother optimization dynamics.
+We further introduce a regularization loss to stabilize prompt
+learning during early training. Additionally, we investigate the
+use of hybrid prompting, combining fixed hard prompts with
+learned soft prompts to enhance instruction generalization.
+We evaluate PROMPTKD-SKL on five instruction-following
+benchmarks using GPT-2 model families. Our method con-
+sistently outperforms prior distillation approaches—including
+PROMPTKD, MINILLM, and DISTILLM—in terms of
+ROUGE-L, while requiring minimal additional parameters. Ab-
+lation studies confirm the effectiveness of skew divergence and
+hybrid prompting in improving both convergence and general-
+ization.
 
 ## Requirements
 
