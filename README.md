@@ -38,8 +38,8 @@ ization.
 
 See `install.sh`
 ```
-conda create -n promptkd python=3.8
-conda activate promptkd
+conda create -n promptkd-SKL python=3.8
+conda activate promptkd-SKL
 bash install.sh
 ```
 
@@ -65,7 +65,7 @@ Reproduce the performance of the model checkpoint used in the paper.
 ```
 bash scripts/{model}/eval/run_eval.sh . checkpoints/{model}/train/{method}/{model}-{size}
 ```
-You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd}`.
+You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd, promptkd-SKL}`.
 
 For GPT-2, you can choose `{size}` in `{base, medium, large}`.  
 For OPT, you can choose `{size}` in `{1.3B, 2.7B, 6.7B}`.  
@@ -79,7 +79,7 @@ Training scripts are as below.
 bash scripts/{model}/{method}/{method}_{student_size}.sh # For training
 bash scripts/{model}/eval/run_eval.sh . results/{model}/train/{method}/{model}-{student_size}-{teacher_size}/{your_exp_folder}/best_rougeL # For evaluation
 ```
-You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd}`.
+You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd, promptkd-SKL}`.
 
 Determine `{student_size}` and `{teacher_size}` by checking the `scripts` folder.  
 Also, put your experiment output folder in `{your_exp_folder}` by checking the `results/{model}/train` folder.
