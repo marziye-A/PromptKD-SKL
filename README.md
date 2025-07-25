@@ -1,11 +1,9 @@
-# PromptKD-SKL: Stable Prompt-Based Knowledge
-Distillation for Generative Language Models via
-Skew Divergence
+# PromptKD-SKL: Stable Prompt-Based Knowledge Distillation for Generative Language Models via Skew Divergence
 
 
 
 
-> **PromptKD: Distilling Student-Friendly Knowledge for Generative Language Models via Prompt Tuning**<br>
+> **PromptKD-SKL: Stable Prompt-Based Knowledge Distillation for Generative Language Models via Skew Divergence**<br>
 > Marzieh Azad <br>
 
 >**Abstract**: <br>
