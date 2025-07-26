@@ -55,6 +55,14 @@ This script downloads
     - Here, we provide PromptKD checkpoints via huggingface hub ([Link](https://huggingface.co/collections/gmkim/promptkd-66728dc78171db46e7fb7bcd))
 - Data for training and evaluation in `data` and `processed_data` folder.
 
+use the following code to download the datasets needed:
+```
+huggingface-cli download MiniLLM/dolly --repo-type dataset /PATH_TO/LMOps/minillm/data/dolly/
+huggingface-cli download MiniLLM/self-inst --repo-type dataset /PATH_TO/LMOps/minillm/data/self-inst/
+huggingface-cli download MiniLLM/Vicuna --repo-type dataset /PATH_TO/LMOps/minillm/data/vicuna/
+huggingface-cli download MiniLLM/sinst --repo-type dataset /PATH_TO/LMOps/minillm/data/sinst/
+huggingface-cli download MiniLLM/uinst --repo-type dataset /PATH_TO/LMOps/minillm/data/uinst/
+```
 
 ## Evaluation
 
