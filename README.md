@@ -82,8 +82,6 @@ You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, s
 Determine `{student_size}` and `{teacher_size}` by checking the `scripts` folder.  
 Also, put your experiment output folder in `{your_exp_folder}` by checking the `results/{model}/train` folder.
 
-We use 8x NVIDIA GeForce RTX 3090 GPUs for GPT-2, and 4x NVIDIA A100 80 GB (PCIe) GPUs for OPT and Llama model.
-
 
 
 ### Change Model Parallel Size
