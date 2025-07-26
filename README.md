@@ -1,23 +1,22 @@
-# PromptKD-SKL: Stable Prompt-Based Knowledge Distillation for Generative Language Models via Skew Divergence
+# Skew-PromptKD: Stable Prompt-Based Knowledge Distillation for Generative Language Models via Skew Divergence
 
 
 
 
-> **PromptKD-SKL: Stable Prompt-Based Knowledge Distillation for Generative Language Models via Skew Divergence**<br>
+> **Skew-PromptKD: Stable Prompt-Based Knowledge Distillation for Generative Language Models via Skew Divergence**<br>
 > Marzieh Azad <br>
 
 >**Abstract**: <br>
-> Abstract—Prompt-based knowledge distillation (KD) has re-
-cently emerged as a lightweight and effective method for com-
+> Abstract—Prompt-based knowledge distillation (KD) has recently emerged as a lightweight and effective method for com-
 pressing large generative language models (LLMs). However,
 existing methods such as PROMPTKD rely on reverse KL
 divergence, which often suffers from gradient instability and
 poor convergence, especially in the early stages of training. In
-this work, we propose PROMPTKD-SKL, a novel distillation
+this work, we propose Skew-PromptKD, a novel distillation
 framework that incorporates skew Kullback-Leibler divergence
 (SKL) to improve the stability, efficiency, and performance of
 prompt-based KD.
-PROMPTKD-SKL preserves the parameter efficiency of soft
+Skew-PromptKD preserves the parameter efficiency of soft
 prompt tuning while replacing standard divergence objectives
 with α-SKL and α-SRKL, which interpolate between teacher and
 student distributions to yield smoother optimization dynamics.
@@ -25,9 +24,8 @@ We further introduce a regularization loss to stabilize prompt
 learning during early training. Additionally, we investigate the
 use of hybrid prompting, combining fixed hard prompts with
 learned soft prompts to enhance instruction generalization.
-We evaluate PROMPTKD-SKL on five instruction-following
-benchmarks using GPT-2 model families. Our method con-
-sistently outperforms prior distillation approaches—including
+We evaluate Skew-PromptKD on five instruction-following
+benchmarks using GPT-2 model families. Our method consistently outperforms prior distillation approaches—including
 PROMPTKD, MINILLM, and DISTILLM—in terms of
 ROUGE-L, while requiring minimal additional parameters. Ab-
 lation studies confirm the effectiveness of skew divergence and
@@ -38,8 +36,8 @@ ization.
 
 See `install.sh`
 ```
-conda create -n promptkd-SKL python=3.8
-conda activate promptkd-SKL
+conda create -n Skew-PromptKD python=3.8
+conda activate Skew-PromptKD
 bash install.sh
 ```
 
@@ -65,7 +63,7 @@ Reproduce the performance of the model checkpoint used in the paper.
 ```
 bash scripts/{model}/eval/run_eval.sh . checkpoints/{model}/train/{method}/{model}-{size}
 ```
-You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd, promptkd-SKL}`.
+You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd, Skew-PromptKD}`.
 
 For GPT-2, you can choose `{size}` in `{base, medium, large}`.  
 For OPT, you can choose `{size}` in `{1.3B, 2.7B, 6.7B}`.  
@@ -79,7 +77,7 @@ Training scripts are as below.
 bash scripts/{model}/{method}/{method}_{student_size}.sh # For training
 bash scripts/{model}/eval/run_eval.sh . results/{model}/train/{method}/{model}-{student_size}-{teacher_size}/{your_exp_folder}/best_rougeL # For evaluation
 ```
-You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd, promptkd-SKL}`.
+You can choose `{model}` in `{gpt2, opt, llama}`, and `{method}` in `{sft, kd, seqkd, minillm, promptkd, Skew-PromptKD}`.
 
 Determine `{student_size}` and `{teacher_size}` by checking the `scripts` folder.  
 Also, put your experiment output folder in `{your_exp_folder}` by checking the `results/{model}/train` folder.
@@ -103,9 +101,9 @@ python3 tools/convert_mp.py \
 
 ---
 
-## 🔬 PromptKD-SKL (New)
+## 🔬 Skew-PromptKD (New)
 
-PromptKD-SKL improves prompt-based distillation via:
+Skew-PromptKD improves prompt-based distillation via:
 
 - Skewed KL divergences (`alpha`-SKL, `alpha`-SRKL)
 - Hybrid prompting (soft + hard)
