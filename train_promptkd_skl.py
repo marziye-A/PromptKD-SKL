@@ -4,7 +4,8 @@
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
-from transformers import GPT2Tokenizer, GPT2LMHeadModel, AdamW
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
+from torch.optim import AdamW
 from datasets import load_dataset
 import argparse
 import os
